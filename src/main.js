@@ -55,86 +55,750 @@ const skillsData = [
 
 const projectsData = [
   {
-    id: 'notes-app',
-    title: 'Secure Notes App',
+    id: 'goalflow',
+    title: 'Goalflow',
     category: 'Apps',
-    desc: 'A cloud-synchronized note taking application with rich formatting, folder organization, and AES local encryption.',
-    techs: ['Flutter', 'Dart', 'Firebase', 'SQLite'],
-    demoUrl: 'https://github.com/ganeshnanda120',
-    githubUrl: 'https://github.com/ganeshnanda120',
-    gradient: 'linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%)',
-    graphic: `
-      <svg viewBox="0 0 100 100" fill="none" style="width: 80px; opacity: 0.85;">
-        <rect x="25" y="15" width="50" height="70" rx="6" fill="#ffffff" fill-opacity="0.15" stroke="#ffffff" stroke-width="2" />
-        <line x1="35" y1="35" x2="65" y2="35" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round" />
-        <line x1="35" y1="48" x2="65" y2="48" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round" />
-        <line x1="35" y1="61" x2="55" y2="61" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round" />
-      </svg>
-    `,
+    desc: 'GoalFlow is a modern, premium mobile productivity and habit-tracking application designed to help users build consistency, manage daily schedules, and log personal development.',
+    techs: ['Flutter', 'Dart', 'Provider', 'Hive', 'Local Notifications'],
+    demoUrl: 'https://github.com/ganeshnanda120/Goalflow',
+    githubUrl: 'https://github.com/ganeshnanda120/Goalflow',
+    gradient: '#091b29',
+    graphic: `<img src="./src/assets/goalflow.png" alt="Goalflow" style="width: 100%; height: 100%; object-fit: cover; display: block;" />`,
     caseStudy: {
-      category: 'Mobile Application',
-      problem: 'Standard notepad apps fail to sync securely across platforms and lack local offline security controls for notes.',
-      solution: 'Developed a Flutter app with AES-256 local encryption and background thread syncing to Firebase Firestore.',
-      challenges: [
-        'Resolving sync conflicts when notes are updated concurrently on offline devices.',
-        'Optimizing encryption latency during multi-note batch downloads.'
-      ],
-      metrics: ['256-Bit AES Crypt', '99.9% Sync Uptime', '50ms Sync Lag'],
-      architecture: ['Flutter Client', 'SQLite Storage', 'AES Pipeline', 'Firebase Db']
+      category: 'Mobile Productivity',
+      htmlContent: `
+        <div style="display: flex; flex-direction: column; gap: 20px;">
+          <div>
+            <h3 style="font-size: 18px; font-weight: 800; color: var(--accent); margin-bottom: 8px;">Case Study: GoalFlow</h3>
+            <p style="color: var(--text-secondary); font-size: 14.5px; line-height: 1.6;">
+              GoalFlow is a modern, premium mobile productivity and habit-tracking application designed to help users build consistency, manage daily schedules, and log personal development.
+            </p>
+          </div>
+          
+          <div>
+            <h4 style="font-size: 16px; font-weight: 750; color: var(--text-primary); margin-bottom: 12px; display: flex; align-items: center; gap: 6px;">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check-circle"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+              Key Features & Workflows
+            </h4>
+            <ul style="padding-left: 20px; list-style-type: disc; display: flex; flex-direction: column; gap: 10px; color: var(--text-secondary); font-size: 14px; line-height: 1.5;">
+              <li><strong>Daily Challenges & Habit Tracking</strong>
+                <ul style="padding-left: 16px; list-style-type: circle; margin-top: 4px; display: flex; flex-direction: column; gap: 4px;">
+                  <li>Consistency Streaks: Track current vs. longest check-in streaks.</li>
+                  <li>Challenge Customization: Set predefined or custom durations with names and descriptions.</li>
+                  <li>Gmail-style Selection Mode: Long-press challenges to select and bulk-delete them.</li>
+                  <li>Daily Experience Diary: Add multiple separate chronological progress entries on the same day. Tap to read details, edit notes, or long-press to bulk-delete entries.</li>
+                </ul>
+              </li>
+              <li><strong>Enhanced Stopwatch & Countdown Timer</strong>
+                <ul style="padding-left: 16px; list-style-type: circle; margin-top: 4px; display: flex; flex-direction: column; gap: 4px;">
+                  <li>Autoscaling Display: Adapts dynamically to different screen widths.</li>
+                  <li>Three-Button Controls: Start, Pause, and Restart actions.</li>
+                  <li>Quick Presets & Custom Input: One-click presets (30s, 1m, 5m, 10m) or custom inputs for hours, minutes, and seconds.</li>
+                </ul>
+              </li>
+              <li><strong>Alarms & Daily Reminders</strong>
+                <ul style="padding-left: 16px; list-style-type: circle; margin-top: 4px; display: flex; flex-direction: column; gap: 4px;">
+                  <li>Dynamic Alarm Engine: Single/recurring alarms and notifications mapped to weekly or monthly goals.</li>
+                </ul>
+              </li>
+              <li><strong>Daily Notes & Editor</strong>
+                <ul style="padding-left: 16px; list-style-type: circle; margin-top: 4px; display: flex; flex-direction: column; gap: 4px;">
+                  <li>Write, view, search, and edit daily logs, thoughts, and memos.</li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+
+          <hr style="border: none; border-top: 1px solid var(--card-border);" />
+
+          <div>
+            <h4 style="font-size: 16px; font-weight: 750; color: var(--text-primary); margin-bottom: 12px; display: flex; align-items: center; gap: 6px;">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-cpu"><rect x="4" y="4" width="16" height="16" rx="2" ry="2"/><rect x="9" y="9" width="6" height="6"/><line x1="9" y1="1" x2="9" y2="4"/><line x1="15" y1="1" x2="15" y2="4"/><line x1="9" y1="20" x2="9" y2="23"/><line x1="15" y1="20" x2="15" y2="23"/><line x1="20" y1="9" x2="23" y2="9"/><line x1="20" y1="15" x2="23" y2="15"/><line x1="1" y1="9" x2="4" y2="9"/><line x1="1" y1="15" x2="4" y2="15"/></svg>
+              🛠️ Technology Stack Used
+            </h4>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px; font-size: 13px;">
+              <div style="padding: 8px; background: var(--bg-secondary); border: 1px solid var(--card-border); border-radius: 6px;">
+                <strong>App Framework:</strong> Flutter (Dart SDK ^3.11.4)
+              </div>
+              <div style="padding: 8px; background: var(--bg-secondary); border: 1px solid var(--card-border); border-radius: 6px;">
+                <strong>State Management:</strong> provider (^6.1.0)
+              </div>
+              <div style="padding: 8px; background: var(--bg-secondary); border: 1px solid var(--card-border); border-radius: 6px;">
+                <strong>Local Storage & Database:</strong> hive (^2.2.3), hive_flutter (^1.1.0), and path_provider (^2.1.5)
+              </div>
+              <div style="padding: 8px; background: var(--bg-secondary); border: 1px solid var(--card-border); border-radius: 6px;">
+                <strong>Local Notifications:</strong> flutter_local_notifications (^17.0.0)
+              </div>
+              <div style="padding: 8px; background: var(--bg-secondary); border: 1px solid var(--card-border); border-radius: 6px;">
+                <strong>Unique Identifiers:</strong> uuid (^4.0.0)
+              </div>
+              <div style="padding: 8px; background: var(--bg-secondary); border: 1px solid var(--card-border); border-radius: 6px;">
+                <strong>Date & Time Formatting:</strong> intl (^0.19.0) & timezone (^0.9.1)
+              </div>
+              <div style="padding: 8px; background: var(--bg-secondary); border: 1px solid var(--card-border); border-radius: 6px;">
+                <strong>Animations:</strong> confetti (^0.7.0)
+              </div>
+              <div style="padding: 8px; background: var(--bg-secondary); border: 1px solid var(--card-border); border-radius: 6px;">
+                <strong>Media / Image Handling:</strong> image_picker (^1.0.4) & cupertino_icons (^1.0.8)
+              </div>
+              <div style="padding: 8px; background: var(--bg-secondary); border: 1px solid var(--card-border); border-radius: 6px; grid-column: 1 / -1;">
+                <strong>Development & Build Tools:</strong><br/>
+                build_runner (^2.4.13)<br/>
+                hive_generator (^2.0.0)<br/>
+                flutter_launcher_icons (^0.13.1)<br/>
+                flutter_lints (^6.0.0)
+              </div>
+            </div>
+          </div>
+        </div>
+      `
+    }
+  },
+  {
+    id: 'health-companion',
+    title: 'Health Companion',
+    category: 'Apps',
+    desc: 'Health Companion is a premium, AI-powered health and wellness companion mobile application designed with a calming dark theme and Material 3 guidelines.',
+    techs: ['Flutter', 'Dart', 'Provider', 'SharedPreferences', 'fl_chart', 'Speech-to-Text', 'TTS'],
+    demoUrl: 'https://github.com/ganeshnanda120/Health-Companion',
+    githubUrl: 'https://github.com/ganeshnanda120/Health-Companion',
+    gradient: '#222222',
+    graphic: `<img src="./src/assets/health_companion.jpg" alt="Health Companion" style="width: 100%; height: 100%; object-fit: cover; display: block;" />`,
+    caseStudy: {
+      category: 'Holistic Wellness',
+      htmlContent: `
+        <div style="display: flex; flex-direction: column; gap: 20px;">
+          <div>
+            <h3 style="font-size: 18px; font-weight: 800; color: var(--accent); margin-bottom: 8px;">Case Study: Health Companion</h3>
+            <p style="color: var(--text-secondary); font-size: 14.5px; line-height: 1.6;">
+              <strong>Health Companion</strong> is a premium, AI-powered health and wellness companion mobile application designed with a calming dark theme and Material 3 guidelines. It acts as a holistic wellness coach to help users log hydration, monitor sleep, track habits, log nutrition, and interact with a voice-based companion.
+            </p>
+          </div>
+          
+          <div>
+            <h4 style="font-size: 16px; font-weight: 750; color: var(--text-primary); margin-bottom: 12px; display: flex; align-items: center; gap: 6px;">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check-circle"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+              Key Features & Functionalities:
+            </h4>
+            <ul style="padding-left: 20px; list-style-type: disc; display: flex; flex-direction: column; gap: 8px; color: var(--text-secondary); font-size: 14px; line-height: 1.5;">
+              <li><strong>Calm & Premium Aesthetics:</strong> Deep dark-slate backgrounds combined with glowing Aurora Borealis gradients and custom micro-animations.</li>
+              <li><strong>Daily Insight Hub:</strong> A real-time contextual banner that alerts users to hydration shortages, sleep variance, and outstanding goals based on weekly logs.</li>
+              <li><strong>Animated Virtual Water Bottle:</strong> Renders fluid liquid inside a bottle container using compound sine-wave equations, rising and falling dynamically based on the user's water goal.</li>
+              <li><strong>Interactive Sleep Analytics:</strong> Visualizes sleep durations and quality logs using custom bar graphs and alerts users when they stray from their sleep averages.</li>
+              <li><strong>Flexible Habit Checklist:</strong> Multi-state checks (Complete, Skip, Pause) with active consecutive streak tracking and category tags.</li>
+              <li><strong>Mindful Nutrition Log:</strong> A macronutrients ratio analysis (Protein, Carbs, Fats) represented as a donut chart to focus on food awareness.</li>
+              <li><strong>Aurora AI Voice Companion:</strong> A simulated voice-to-voice health partner that parses vocal inputs (e.g., <em>"I drank 500ml water"</em>) and records them directly into the database.</li>
+              <li><strong>Offline-first Architecture:</strong> Persists sessions, configuration, conversation logs, and telemetry locally.</li>
+            </ul>
+          </div>
+
+          <hr style="border: none; border-top: 1px solid var(--card-border);" />
+
+          <div>
+            <h4 style="font-size: 16px; font-weight: 750; color: var(--text-primary); margin-bottom: 12px; display: flex; align-items: center; gap: 6px;">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-cpu"><rect x="4" y="4" width="16" height="16" rx="2" ry="2"/><rect x="9" y="9" width="6" height="6"/><line x1="9" y1="1" x2="9" y2="4"/><line x1="15" y1="1" x2="15" y2="4"/><line x1="9" y1="20" x2="9" y2="23"/><line x1="15" y1="20" x2="15" y2="23"/><line x1="20" y1="9" x2="23" y2="9"/><line x1="20" y1="15" x2="23" y2="15"/><line x1="1" y1="9" x2="4" y2="9"/><line x1="1" y1="15" x2="4" y2="15"/></svg>
+              Technology Stack
+            </h4>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px; font-size: 13px;">
+              <div style="padding: 8px; background: var(--bg-secondary); border: 1px solid var(--card-border); border-radius: 6px;">
+                <strong>Frontend Framework:</strong> Flutter (Latest Stable)
+              </div>
+              <div style="padding: 8px; background: var(--bg-secondary); border: 1px solid var(--card-border); border-radius: 6px;">
+                <strong>Programming Language:</strong> Dart
+              </div>
+              <div style="padding: 8px; background: var(--bg-secondary); border: 1px solid var(--card-border); border-radius: 6px;">
+                <strong>Design System:</strong> Material 3
+              </div>
+              <div style="padding: 8px; background: var(--bg-secondary); border: 1px solid var(--card-border); border-radius: 6px;">
+                <strong>State Management:</strong> Provider (provider: ^6.1.2)
+              </div>
+              <div style="padding: 8px; background: var(--bg-secondary); border: 1px solid var(--card-border); border-radius: 6px;">
+                <strong>Local Storage:</strong> SharedPreferences (shared_preferences: ^2.2.3)
+              </div>
+              <div style="padding: 8px; background: var(--bg-secondary); border: 1px solid var(--card-border); border-radius: 6px;">
+                <strong>Data Visualizations:</strong> fl_chart (fl_chart: ^0.66.0)
+              </div>
+              <div style="padding: 8px; background: var(--bg-secondary); border: 1px solid var(--card-border); border-radius: 6px; grid-column: 1 / -1;">
+                <strong>Voice & Text Capabilities:</strong><br/>
+                - speech_to_text: ^7.3.0<br/>
+                - flutter_tts: ^4.1.0
+              </div>
+              <div style="padding: 8px; background: var(--bg-secondary); border: 1px solid var(--card-border); border-radius: 6px; grid-column: 1 / -1;">
+                <strong>Additional Utilities:</strong><br/>
+                - intl: ^0.19.0<br/>
+                - uuid: ^4.3.3<br/>
+                - image_picker: ^1.2.2
+              </div>
+            </div>
+          </div>
+        </div>
+      `
     }
   },
   {
     id: 'fitness-tracker',
-    title: 'Low-Power Fitness Tracker',
+    title: 'Fitness Tracker',
     category: 'Apps',
-    desc: 'Mobile application designed to track steps, calories, and outdoor runs using low-power hardware integrations.',
-    techs: ['Flutter', 'Provider', 'SQLite', 'Sensor APIs'],
-    demoUrl: 'https://github.com/ganeshnanda120',
-    githubUrl: 'https://github.com/ganeshnanda120',
-    gradient: 'linear-gradient(135deg, #4c1d95 0%, #8b5cf6 100%)',
-    graphic: `
-      <svg viewBox="0 0 100 100" fill="none" style="width: 80px; opacity: 0.85;">
-        <circle cx="50" cy="50" r="30" stroke="#ffffff" stroke-width="2.5" stroke-dasharray="6,4" />
-        <path d="M40 50 L48 42 L55 58 L62 50" stroke="#ffffff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
-      </svg>
-    `,
+    desc: 'A premium, DartPad-compatible Flutter fitness logging and progress-tracking dashboard. It provides a visual interface for monitoring daily workout statistics and tracking personal health goals.',
+    techs: ['Flutter', 'StatefulWidget', 'Material 3', 'shared_preferences'],
+    demoUrl: 'https://github.com/ganeshnanda120/Fitness-Tracker',
+    githubUrl: 'https://github.com/ganeshnanda120/Fitness-Tracker',
+    gradient: '#020d13',
+    graphic: `<img src="./src/assets/fitness_tracker.jpg" alt="Fitness Tracker" style="width: 100%; height: 100%; object-fit: cover; display: block;" />`,
     caseStudy: {
-      category: 'Mobile / IoT App',
-      problem: 'GPS-based running apps consume extensive battery life, draining up to 25% of standard phone batteries per hour.',
-      solution: 'Built a custom sensor aggregator in Flutter that checks device pedometers and coordinates background GPS updates.',
-      challenges: [
-        'Ensuring background services were not aggressively terminated by Android and iOS power settings.',
-        'Smoothing noise from sensor readings in varied walking patterns.'
-      ],
-      metrics: ['-65% Battery Load', '10k+ Steps Logged', 'GPS Smoothing'],
-      architecture: ['Pedometer API', 'Flutter Service', 'Provider State', 'Local SQLite']
+      category: 'Mobile Dashboard',
+      htmlContent: `
+        <div style="display: flex; flex-direction: column; gap: 20px;">
+          <div>
+            <h3 style="font-size: 18px; font-weight: 800; color: var(--accent); margin-bottom: 8px;">Case Study: Fitness Tracker</h3>
+            <p style="color: var(--text-secondary); font-size: 14.5px; line-height: 1.6;">
+              A premium, DartPad-compatible Flutter fitness logging and progress-tracking dashboard. It provides a visual interface for monitoring daily workout statistics and tracking personal health goals.
+            </p>
+          </div>
+          
+          <div>
+            <h4 style="font-size: 16px; font-weight: 750; color: var(--text-primary); margin-bottom: 12px; display: flex; align-items: center; gap: 6px;">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check-circle"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+              Key Features:
+            </h4>
+            <ul style="padding-left: 20px; list-style-type: disc; display: flex; flex-direction: column; gap: 8px; color: var(--text-secondary); font-size: 14px; line-height: 1.5;">
+              <li><strong>Initial Profile & Goal Setup:</strong> Form wizard to configure name, age, height, current weight, daily calorie goal, and daily activity duration goal.</li>
+              <li><strong>Calorie & Active Time Dashboard:</strong> Interactive circular progress rings that visualize real-time progress toward daily calorie and duration goals.</li>
+              <li><strong>Multi-Activity Logging:</strong> Support for logging 7 workout types: Walking, Running, Cycling, Swimming, Yoga, Skipping, and Gym Workouts.</li>
+              <li><strong>MET-Based Calorie Estimation:</strong> Automatically calculates burned calories using the formula: MET * weight (kg) * (duration (mins) / 60).</li>
+              <li><strong>Animated Workout History:</strong> Chronological log of past workouts built with a dynamic SliverAnimatedList featuring custom entrance/exit transitions and a tap-to-delete confirmation dialog.</li>
+              <li><strong>Responsive Design:</strong> Auto-scaling layout that dynamically adjusts between grid columns for desktop/tablet widths and single-column structures for mobile.</li>
+            </ul>
+          </div>
+
+          <hr style="border: none; border-top: 1px solid var(--card-border);" />
+
+          <div>
+            <h4 style="font-size: 16px; font-weight: 750; color: var(--text-primary); margin-bottom: 12px; display: flex; align-items: center; gap: 6px;">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-cpu"><rect x="4" y="4" width="16" height="16" rx="2" ry="2"/><rect x="9" y="9" width="6" height="6"/><line x1="9" y1="1" x2="9" y2="4"/><line x1="15" y1="1" x2="15" y2="4"/><line x1="9" y1="20" x2="9" y2="23"/><line x1="15" y1="20" x2="15" y2="23"/><line x1="20" y1="9" x2="23" y2="9"/><line x1="20" y1="15" x2="23" y2="15"/><line x1="1" y1="9" x2="4" y2="9"/><line x1="1" y1="15" x2="4" y2="15"/></svg>
+              Technology Stack
+            </h4>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px; font-size: 13px;">
+              <div style="padding: 8px; background: var(--bg-secondary); border: 1px solid var(--card-border); border-radius: 6px;">
+                <strong>Framework:</strong> Flutter (Dart SDK >=3.0.0 &lt;4.0.0)
+              </div>
+              <div style="padding: 8px; background: var(--bg-secondary); border: 1px solid var(--card-border); border-radius: 6px;">
+                <strong>State Management:</strong> Native stateful widget state (StatefulWidget) to maintain single-file, DartPad-compatible portability.
+              </div>
+              <div style="padding: 8px; background: var(--bg-secondary); border: 1px solid var(--card-border); border-radius: 6px;">
+                <strong>Design System:</strong> Material 3 (with custom dark mode slate and teal/cyan color schemes).
+              </div>
+              <div style="padding: 8px; background: var(--bg-secondary); border: 1px solid var(--card-border); border-radius: 6px;">
+                <strong>Local Storage / Persistence:</strong> shared_preferences: ^2.2.0 (for persisting user profiles, targets, and workout records).
+              </div>
+              <div style="padding: 8px; background: var(--bg-secondary); border: 1px solid var(--card-border); border-radius: 6px; grid-column: 1 / -1;">
+                <strong>Development Utilities:</strong> flutter_launcher_icons: ^0.13.1 (for app launcher assets).
+              </div>
+            </div>
+          </div>
+        </div>
+      `
+    }
+  },
+  {
+    id: 'resume-builder',
+    title: 'Resume Builder',
+    category: 'Apps',
+    desc: 'A beautiful, modern, and production-ready Flutter web application that enables users to create and customize professional resumes completely free and 100% offline.',
+    techs: ['Flutter', 'Dart', 'Material 3', 'pdf', 'printing', 'image_picker', 'url_launcher'],
+    demoUrl: 'https://github.com/ganeshnanda120/Resume-Builder',
+    githubUrl: 'https://github.com/ganeshnanda120/Resume-Builder',
+    gradient: '#ffffff',
+    graphic: `<img src="./src/assets/resume_builder.jpg" alt="Resume Builder" style="width: 100%; height: 100%; object-fit: cover; display: block;" />`,
+    caseStudy: {
+      category: 'Mobile Productivity',
+      htmlContent: `
+        <div style="display: flex; flex-direction: column; gap: 20px;">
+          <div>
+            <h3 style="font-size: 18px; font-weight: 800; color: var(--accent); margin-bottom: 8px;">Case Study: Hero Resume Builder</h3>
+            <p style="color: var(--text-secondary); font-size: 14.5px; line-height: 1.6;">
+              <strong>Hero Resume Builder</strong> is a beautiful, modern, and production-ready Flutter web application that enables users to create and customize professional resumes completely free and 100% offline. It operates entirely client-side inside the browser, guaranteeing maximum user privacy.
+            </p>
+          </div>
+          
+          <div>
+            <h4 style="font-size: 16px; font-weight: 750; color: var(--text-primary); margin-bottom: 12px; display: flex; align-items: center; gap: 6px;">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check-circle"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+              Key Features & Workflows:
+            </h4>
+            <ul style="padding-left: 20px; list-style-type: disc; display: flex; flex-direction: column; gap: 8px; color: var(--text-secondary); font-size: 14px; line-height: 1.5;">
+              <li><strong>Real-time Live Preview:</strong> Instantly displays updates on an A4 sheet layout preview as form fields are filled out.</li>
+              <li><strong>Offline First & Private:</strong> Operates entirely client-side inside the browser, ensuring user data never leaves the device.</li>
+              <li><strong>Modern Material 3 Theme:</strong> Styled with a clean orange UI palette adhering to the Material 3 design spec.</li>
+              <li><strong>Responsive Multi-Pane Interface:</strong> Dual-column split layout for desktops that transitions to tabbed navigation for screens of smaller sizes.</li>
+              <li><strong>Rich Document Sections:</strong> Pre-built panels for personal info, profile pictures, education, projects, skills, certifications, and languages.</li>
+              <li><strong>High-Fidelity PDF Export:</strong> Seamless print-ready document exports with customized PDF alignments and fonts.</li>
+              <li><strong>Sample Data Population:</strong> Single-click placeholder injection to quickly preview resume formatting options.</li>
+            </ul>
+          </div>
+
+          <hr style="border: none; border-top: 1px solid var(--card-border);" />
+
+          <div>
+            <h4 style="font-size: 16px; font-weight: 750; color: var(--text-primary); margin-bottom: 12px; display: flex; align-items: center; gap: 6px;">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-cpu"><rect x="4" y="4" width="16" height="16" rx="2" ry="2"/><rect x="9" y="9" width="6" height="6"/><line x1="9" y1="1" x2="9" y2="4"/><line x1="15" y1="1" x2="15" y2="4"/><line x1="9" y1="20" x2="9" y2="23"/><line x1="15" y1="20" x2="15" y2="23"/><line x1="20" y1="9" x2="23" y2="9"/><line x1="20" y1="15" x2="23" y2="15"/><line x1="1" y1="9" x2="4" y2="9"/><line x1="1" y1="15" x2="4" y2="15"/></svg>
+              Technology Stack Used
+            </h4>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px; font-size: 13px;">
+              <div style="padding: 8px; background: var(--bg-secondary); border: 1px solid var(--card-border); border-radius: 6px;">
+                <strong>Frontend Framework:</strong> Flutter (Web Platform target)
+              </div>
+              <div style="padding: 8px; background: var(--bg-secondary); border: 1px solid var(--card-border); border-radius: 6px;">
+                <strong>Programming Language:</strong> Dart
+              </div>
+              <div style="padding: 8px; background: var(--bg-secondary); border: 1px solid var(--card-border); border-radius: 6px;">
+                <strong>Design System:</strong> Material 3 (Orange theme preset)
+              </div>
+              <div style="padding: 8px; background: var(--bg-secondary); border: 1px solid var(--card-border); border-radius: 6px;">
+                <strong>Typography:</strong> Google Fonts (Outfit & Inter)
+              </div>
+              <div style="padding: 8px; background: var(--bg-secondary); border: 1px solid var(--card-border); border-radius: 6px; grid-column: 1 / -1;">
+                <strong>Key Packages & Libraries:</strong><br/>
+                - pdf (Custom document building & A4 canvas mapping)<br/>
+                - printing (Live browser previewer & print layouts)<br/>
+                - image_picker (Web-compliant image selection & file browser)<br/>
+                - url_launcher (Secure external redirection & social linkages)
+              </div>
+            </div>
+          </div>
+        </div>
+      `
+    }
+  },
+  {
+    id: 'quiz-app',
+    title: 'Quiz App',
+    category: 'Apps',
+    desc: 'An interactive trivia and quiz application.',
+    techs: ['Flutter', 'Dart', 'Material Design', 'vector_math', 'cupertino_icons', 'flutter_launcher_icons'],
+    demoUrl: 'https://github.com/ganeshnanda120/Quiz-app',
+    githubUrl: 'https://github.com/ganeshnanda120/Quiz-app',
+    gradient: '#434854',
+    graphic: `<img src="./src/assets/quiz_app.jpg" alt="Quiz App" style="width: 100%; height: 100%; object-fit: cover; display: block;" />`,
+    caseStudy: {
+      category: 'Interactive Trivia',
+      htmlContent: `
+        <div style="display: flex; flex-direction: column; gap: 20px;">
+          <div>
+            <h3 style="font-size: 18px; font-weight: 800; color: var(--accent); margin-bottom: 8px;">Case Study Summary</h3>
+            <p style="color: var(--text-secondary); font-size: 14.5px; line-height: 1.6;">
+              <strong>Core Functionality:</strong> An interactive trivia and quiz application.
+            </p>
+          </div>
+          
+          <div>
+            <h4 style="font-size: 16px; font-weight: 750; color: var(--text-primary); margin-bottom: 12px; display: flex; align-items: center; gap: 6px;">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check-circle"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+              Key Features:
+            </h4>
+            <ul style="padding-left: 20px; list-style-type: disc; display: flex; flex-direction: column; gap: 8px; color: var(--text-secondary); font-size: 14px; line-height: 1.5;">
+              <li><strong>Categorized Quizzes:</strong> Supports multiple topics including Flutter & Dart, Computer Science, and General Knowledge.</li>
+              <li><strong>Question Timer:</strong> Real-time 30-second countdown timer per question with auto-navigation and automatic submission on timeout.</li>
+              <li><strong>Interactive Scoring:</strong> Dynamic results page showing correctly answered questions, total score, and custom explanations for each answer.</li>
+              <li><strong>Smooth Transitions:</strong> Custom dark mode UI with page transitions powered by AnimatedSwitcher and FadeTransition.</li>
+            </ul>
+          </div>
+
+          <hr style="border: none; border-top: 1px solid var(--card-border);" />
+
+          <div>
+            <h4 style="font-size: 16px; font-weight: 750; color: var(--text-primary); margin-bottom: 12px; display: flex; align-items: center; gap: 6px;">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-cpu"><rect x="4" y="4" width="16" height="16" rx="2" ry="2"/><rect x="9" y="9" width="6" height="6"/><line x1="9" y1="1" x2="9" y2="4"/><line x1="15" y1="1" x2="15" y2="4"/><line x1="9" y1="20" x2="9" y2="23"/><line x1="15" y1="20" x2="15" y2="23"/><line x1="20" y1="9" x2="23" y2="9"/><line x1="20" y1="15" x2="23" y2="15"/><line x1="1" y1="9" x2="4" y2="9"/><line x1="1" y1="15" x2="4" y2="15"/></svg>
+              Exact Technology Stack
+            </h4>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px; font-size: 13.5px;">
+              <div style="padding: 10px; background: var(--bg-secondary); border: 1px solid var(--card-border); border-radius: 6px;">
+                <strong>Core Framework:</strong> Flutter (Cross-platform)
+              </div>
+              <div style="padding: 10px; background: var(--bg-secondary); border: 1px solid var(--card-border); border-radius: 6px;">
+                <strong>Programming Language:</strong> Dart
+              </div>
+              <div style="padding: 10px; background: var(--bg-secondary); border: 1px solid var(--card-border); border-radius: 6px;">
+                <strong>Design/Theme:</strong> Material Design with a custom dark gradient theme
+              </div>
+              <div style="padding: 10px; background: var(--bg-secondary); border: 1px solid var(--card-border); border-radius: 6px; grid-column: 1 / -1;">
+                <strong>Key Packages & Dependencies:</strong><br/>
+                - vector_math (for mathematical/layout calculations)<br/>
+                - cupertino_icons (for iOS-style UI icons)<br/>
+                - flutter_launcher_icons (for asset-based launcher icon generation)
+              </div>
+            </div>
+          </div>
+        </div>
+      `
+    }
+  },
+  {
+    id: 'incredible-india',
+    title: 'Incredible India',
+    category: 'Apps',
+    desc: 'The Incredible India application is a premium, responsive travel guide and tourism discovery app designed to showcase India’s cultural heritage, natural landscapes, and spiritual destinations.',
+    techs: ['Flutter', 'Dart', 'Material 3', 'Canvas API', 'ValueNotifier'],
+    demoUrl: 'https://github.com/ganeshnanda120/Incredible-India-app',
+    githubUrl: 'https://github.com/ganeshnanda120/Incredible-India-app',
+    gradient: 'linear-gradient(to right, #fea638, #ff4011)',
+    graphic: `<img src="./src/assets/incredible_india.png" alt="Incredible India" style="width: 100%; height: 100%; object-fit: cover; display: block;" />`,
+    caseStudy: {
+      category: 'Mobile Travel',
+      htmlContent: `
+        <div style="display: flex; flex-direction: column; gap: 20px;">
+          <div>
+            <h3 style="font-size: 18px; font-weight: 800; color: var(--accent); margin-bottom: 8px;">Case Study: Incredible India</h3>
+            <p style="color: var(--text-secondary); font-size: 14.5px; line-height: 1.6;">
+              The Incredible India application is a premium, responsive travel guide and tourism discovery app designed to showcase India’s cultural heritage, natural landscapes, and spiritual destinations under the core philosophical motto of "Athithi Devo Bhava" (The guest is equivalent to God).
+            </p>
+          </div>
+          
+          <div>
+            <h4 style="font-size: 16px; font-weight: 750; color: var(--text-primary); margin-bottom: 12px; display: flex; align-items: center; gap: 6px;">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check-circle"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+              Core Features
+            </h4>
+            <ul style="padding-left: 20px; list-style-type: disc; display: flex; flex-direction: column; gap: 10px; color: var(--text-secondary); font-size: 14px; line-height: 1.5;">
+              <li><strong>Dynamic Travel Discovery:</strong>
+                <ul style="padding-left: 16px; list-style-type: circle; margin-top: 4px; display: flex; flex-direction: column; gap: 4px;">
+                  <li>Search & Filters: Users can search destinations or states in real-time.</li>
+                  <li>Category-Based Filtering: Places are categorized into Heritage (e.g., Taj Mahal, Hawa Mahal, Ellora Caves), Nature (e.g., Munnar Tea Gardens, Valley of Flowers, Sundarbans), and Spiritual (e.g., Golden Temple, Varanasi Ghats).</li>
+                  <li>Interactive Favorites System: A stateful toggle to save favorite destinations and filter the feed to show only favorites.</li>
+                </ul>
+              </li>
+              <li><strong>Adaptive Responsive Layouts:</strong> Dynamically adapts between a clean single-column list layout on mobile devices and a multi-column grid layout on tablets or web screens based on screen width constraint checks.</li>
+              <li><strong>Advanced Destination Detail Screen:</strong>
+                <ul style="padding-left: 16px; list-style-type: circle; margin-top: 4px; display: flex; flex-direction: column; gap: 4px;">
+                  <li>Implements a tabbed interface (TabBarView) showing Overview, History & Facts (featuring a grid layout of key-value quick facts), and Traveler Tips (rendered with custom checked icons).</li>
+                  <li>Features structured destination data including ratings, best time to visit, and verification badges.</li>
+                </ul>
+              </li>
+              <li><strong>Interactive Trip Planner:</strong> An interactive bottom sheet panel to request customized itineraries, displaying mock prices for services like heritage tours, private cabs, and local culinary experiences.</li>
+              <li><strong>Zero-Asset Vector Graphics (Custom Canvas Painters):</strong> Instead of downloading external images, the app features custom Dart/Flutter vector graphics drawn programmatically on-the-fly using CustomPainter to keep the app lightweight:
+                <ul style="padding-left: 16px; list-style-type: circle; margin-top: 4px; display: flex; flex-direction: column; gap: 4px;">
+                  <li>Ashoka Chakra Logo: A mathematically precise 24-spoked wheel drawn with custom trigonometric approximation mappings to avoid runtime math dependencies.</li>
+                  <li>Heritage Archway: A custom-drawn Indian-style classical archway using cubic bezier paths.</li>
+                  <li>Nature Scenery: Stylized mountains, custom radial gradient suns, and wave ripples.</li>
+                  <li>Spiritual Lotus: Symmetrical lotus petals drawn utilizing quadratic bezier curves with a soft halo ring background.</li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+
+          <hr style="border: none; border-top: 1px solid var(--card-border);" />
+
+          <div>
+            <h4 style="font-size: 16px; font-weight: 750; color: var(--text-primary); margin-bottom: 12px; display: flex; align-items: center; gap: 6px;">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-cpu"><rect x="4" y="4" width="16" height="16" rx="2" ry="2"/><rect x="9" y="9" width="6" height="6"/><line x1="9" y1="1" x2="9" y2="4"/><line x1="15" y1="1" x2="15" y2="4"/><line x1="9" y1="20" x2="9" y2="23"/><line x1="15" y1="20" x2="15" y2="23"/><line x1="20" y1="9" x2="23" y2="9"/><line x1="20" y1="15" x2="23" y2="15"/><line x1="1" y1="9" x2="4" y2="9"/><line x1="1" y1="15" x2="4" y2="15"/></svg>
+              🛠️ Technology Stack Used
+            </h4>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px; font-size: 13px;">
+              <div style="padding: 8px; background: var(--bg-secondary); border: 1px solid var(--card-border); border-radius: 6px;">
+                <strong>Development Framework:</strong> Flutter & Dart (Target environment SDK constraints: sdk: ^3.11.4)
+              </div>
+              <div style="padding: 8px; background: var(--bg-secondary); border: 1px solid var(--card-border); border-radius: 6px;">
+                <strong>UI Design System & Styling:</strong> Material 3 Design enabled globally (useMaterial3: true). Tailored light and dark theme seed schemes representing saffron (0xFFFF9933), green (0xFF138808), and navy blue (0xFF000080).
+              </div>
+              <div style="padding: 8px; background: var(--bg-secondary); border: 1px solid var(--card-border); border-radius: 6px;">
+                <strong>Custom Graphics Engine:</strong> Flutter's Canvas API (Path, Paint, RadialGradient, cubicTo, quadraticBezierTo) for all graphics.
+              </div>
+              <div style="padding: 8px; background: var(--bg-secondary); border: 1px solid var(--card-border); border-radius: 6px;">
+                <strong>State Management:</strong> ValueNotifier / ValueListenableBuilder listens and propagates theme changes; StatefulWidgets manage local queries, favorites, and filters.
+              </div>
+              <div style="padding: 8px; background: var(--bg-secondary); border: 1px solid var(--card-border); border-radius: 6px; grid-column: 1 / -1;">
+                <strong>Navigation & Transitions:</strong> Hero Animations smoothly transition the card widgets; NestedScrollView & SliverAppBar enable collapsing scroll animations on details.
+              </div>
+            </div>
+          </div>
+        </div>
+      `
+    }
+  },
+  {
+    id: 'note-app',
+    title: 'Note App',
+    category: 'Apps',
+    desc: 'This application is a modern, responsive Notes Dashboard designed to capture, organize, and filter thoughts with premium aesthetics.',
+    techs: ['Flutter', 'Dart', 'shared_preferences', 'Material 3', 'cupertino_icons'],
+    demoUrl: 'https://github.com/ganeshnanda120/Note-app',
+    githubUrl: 'https://github.com/ganeshnanda120/Note-app',
+    gradient: '#ffffff',
+    graphic: `<img src="./src/assets/note_app.png" alt="Note App" style="width: 100%; height: 100%; object-fit: cover; display: block;" />`,
+    caseStudy: {
+      category: 'Mobile Productivity',
+      htmlContent: `
+        <div style="display: flex; flex-direction: column; gap: 20px;">
+          <div>
+            <h3 style="font-size: 18px; font-weight: 800; color: var(--accent); margin-bottom: 8px;">Case Study: Note-app (My Notes Dashboard)</h3>
+            <p style="color: var(--text-secondary); font-size: 14.5px; line-height: 1.6;">
+              This application is a modern, responsive Notes Dashboard designed to capture, organize, and filter thoughts with premium aesthetics.
+            </p>
+          </div>
+          
+          <div>
+            <h4 style="font-size: 16px; font-weight: 750; color: var(--text-primary); margin-bottom: 12px; display: flex; align-items: center; gap: 6px;">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check-circle"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+              Core Features:
+            </h4>
+            <ul style="padding-left: 20px; list-style-type: disc; display: flex; flex-direction: column; gap: 8px; color: var(--text-secondary); font-size: 14px; line-height: 1.5;">
+              <li><strong>Interactive Dashboard & Stats:</strong>
+                <ul style="padding-left: 16px; list-style-type: circle; margin-top: 4px; display: flex; flex-direction: column; gap: 4px;">
+                  <li>Real-time stat cards displaying Total Notes, Favorites, and Ideas counters.</li>
+                  <li>Tapping these statistics triggers direct filtering (e.g., clicking the "Favorites" stat toggles only favorited notes).</li>
+                  <li>Dynamic time-aware greetings (e.g., "Good morning", "Good evening") and formatted header date.</li>
+                </ul>
+              </li>
+              <li><strong>Pinterest-style Staggered Grid:</strong> An emulated masonry grid that automatically splits cards into $N$ vertical columns (2 on mobile, 3 on desktop) to handle notes of variable lengths beautifully.</li>
+              <li><strong>Slide-up Note Editor:</strong> A custom bottom sheet that slides up to add/modify notes. Real-time word counter and character counter updating as you type.</li>
+              <li><strong>Visual Accent Customization:</strong> Color picker selection with a curated list of modern pastel tones (Sky Blue, Mint Green, Soft Yellow, Cherry Blossom Pink, Lavender Purple, Soft Peach, Cool Slate, Warm Stone).</li>
+              <li><strong>Swipe-to-Delete with Undo:</strong> Integration of Gmail-style dismissible cards with horizontal swipe action and a floating Undo SnackBar to recover deleted notes instantly.</li>
+              <li><strong>Smart Search & Filters:</strong> Instant search queries matching keywords inside titles and note content. Category filtering chips (All, Personal, Work, Study, Ideas, Others).</li>
+              <li><strong>Animated Glassmorphic Dark Mode:</strong> Seamless dark/light theme switching with a rotating animated sun/moon icon and background glassmorphic rings.</li>
+            </ul>
+          </div>
+
+          <hr style="border: none; border-top: 1px solid var(--card-border);" />
+
+          <div>
+            <h4 style="font-size: 16px; font-weight: 750; color: var(--text-primary); margin-bottom: 12px; display: flex; align-items: center; gap: 6px;">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-cpu"><rect x="4" y="4" width="16" height="16" rx="2" ry="2"/><rect x="9" y="9" width="6" height="6"/><line x1="9" y1="1" x2="9" y2="4"/><line x1="15" y1="1" x2="15" y2="4"/><line x1="9" y1="20" x2="9" y2="23"/><line x1="15" y1="20" x2="15" y2="23"/><line x1="20" y1="9" x2="23" y2="9"/><line x1="20" y1="15" x2="23" y2="15"/><line x1="1" y1="9" x2="4" y2="9"/><line x1="1" y1="15" x2="4" y2="15"/></svg>
+              🛠️ Technology Stack Used
+            </h4>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px; font-size: 13px;">
+              <div style="padding: 8px; background: var(--bg-secondary); border: 1px solid var(--card-border); border-radius: 6px; grid-column: 1 / -1;">
+                <strong>Core Architecture:</strong><br/>
+                - Flutter Framework (Dart SDK ^3.11.4): A multi-platform codebase building native interfaces across Android, iOS, Web, macOS, Linux, and Windows.<br/>
+                - Material Design 3 (Material 3): Provides modern components, color-seed generation, typography, and premium user interaction curves.
+              </div>
+              <div style="padding: 8px; background: var(--bg-secondary); border: 1px solid var(--card-border); border-radius: 6px; grid-column: 1 / -1;">
+                <strong>Key Packages & Dependencies:</strong><br/>
+                - shared_preferences (v2.5.5): Persists user-created notes locally on the device using serialized JSON string stores.<br/>
+                - dart:convert: Handled natively within the Dart SDK to encode/decode the standard Note models.<br/>
+                - cupertino_icons (v1.0.8): Used for Apple-style fallback icons.
+              </div>
+              <div style="padding: 8px; background: var(--bg-secondary); border: 1px solid var(--card-border); border-radius: 6px; grid-column: 1 / -1;">
+                <strong>Development & Linting:</strong><br/>
+                - flutter_launcher_icons (v0.14.4): Automated asset tool configures and generates launcher icons across Android and iOS platform folders using flutter_launcher_icons.yaml.<br/>
+                - flutter_lints (v6.0.0): Code analysis tool configuring coding guidelines defined in analysis_options.yaml.
+              </div>
+            </div>
+          </div>
+        </div>
+      `
     }
   },
   {
     id: 'expense-tracker',
-    title: 'Expense Tracker Board',
-    category: 'Web',
-    desc: 'A full-stack financial bookkeeping platform featuring category visualizations, invoice exports, and recurrent transaction schedules.',
-    techs: ['React', 'TypeScript', 'Node.js', 'MongoDB'],
-    demoUrl: 'https://github.com/ganeshnanda120',
-    githubUrl: 'https://github.com/ganeshnanda120',
-    gradient: 'linear-gradient(135deg, #064e3b 0%, #10b981 100%)',
-    graphic: `
-      <svg viewBox="0 0 100 100" fill="none" style="width: 80px; opacity: 0.85;">
-        <circle cx="50" cy="50" r="30" stroke="#ffffff" stroke-width="2.5" />
-        <path d="M50 35 L50 65 M38 45 L50 35 L62 45" stroke="#ffffff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
-      </svg>
-    `,
+    title: 'Expense Tracker',
+    category: 'Apps',
+    desc: 'The Expense Tracker is a clean, modern, and intuitive personal finance application designed to help users track and monitor their daily expenditures.',
+    techs: ['Flutter', 'Dart', 'Material 3', 'intl', 'shared_preferences'],
+    demoUrl: 'https://github.com/ganeshnanda120/Expense-Tracker',
+    githubUrl: 'https://github.com/ganeshnanda120/Expense-Tracker',
+    gradient: '#ffffff',
+    graphic: `<img src="./src/assets/expense_tracker.png" alt="Expense Tracker" style="width: 100%; height: 100%; object-fit: cover; display: block;" />`,
+    caseStudy: {
+      category: 'Mobile Finance',
+      htmlContent: `
+        <div style="display: flex; flex-direction: column; gap: 20px;">
+          <div>
+            <h3 style="font-size: 18px; font-weight: 800; color: var(--accent); margin-bottom: 8px;">Case Study: Expense Tracker</h3>
+            <p style="color: var(--text-secondary); font-size: 14.5px; line-height: 1.6;">
+              The Expense Tracker is a clean, modern, and intuitive personal finance application designed to help users track and monitor their daily expenditures. It is intended to teach or demonstrate core mobile application concepts such as CRUD (Create, Read, Update, Delete) operations, form validation, dynamic list rendering, and state management.
+            </p>
+          </div>
+          
+          <div>
+            <h4 style="font-size: 16px; font-weight: 750; color: var(--text-primary); margin-bottom: 12px; display: flex; align-items: center; gap: 6px;">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-users"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+              👥 Primary Use Cases
+            </h4>
+            <ul style="padding-left: 20px; list-style-type: disc; display: flex; flex-direction: column; gap: 6px; color: var(--text-secondary); font-size: 14px; line-height: 1.5;">
+              <li><strong>Personal Finance:</strong> Tracking individual daily spending patterns.</li>
+              <li><strong>Student Expense Management:</strong> Keeping logs of expenses on food, books, transport, etc.</li>
+              <li><strong>Family Budget Tracking:</strong> Monitoring overall household expenditures.</li>
+              <li><strong>Small Business Records:</strong> A simple ledger to maintain basic operational expenses.</li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 style="font-size: 16px; font-weight: 750; color: var(--text-primary); margin-bottom: 12px; display: flex; align-items: center; gap: 6px;">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check-circle"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+              ✨ Core Features
+            </h4>
+            <ul style="padding-left: 20px; list-style-type: disc; display: flex; flex-direction: column; gap: 8px; color: var(--text-secondary); font-size: 14px; line-height: 1.5;">
+              <li><strong>Expense Input:</strong> Users can add new expense items with a Title and Amount.</li>
+              <li><strong>Real-time Total Calculation:</strong> The top card dynamically calculates and displays total spending as items are added or removed.</li>
+              <li><strong>Form Validation:</strong> Built-in form checks to prevent blank titles or negative/invalid amounts.</li>
+              <li><strong>ListView Rendering:</strong> A scrollable cards-based list layout displaying each expense with its title, amount, and the timestamp it was recorded.</li>
+              <li><strong>Confirmation Dialogs:</strong> Asks for confirmation before permanently deleting an expense.</li>
+              <li><strong>Empty State Screen:</strong> A clean placeholder illustration and message when no expenses have been recorded yet.</li>
+            </ul>
+          </div>
+
+          <hr style="border: none; border-top: 1px solid var(--card-border);" />
+
+          <div>
+            <h4 style="font-size: 16px; font-weight: 750; color: var(--text-primary); margin-bottom: 12px; display: flex; align-items: center; gap: 6px;">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-cpu"><rect x="4" y="4" width="16" height="16" rx="2" ry="2"/><rect x="9" y="9" width="6" height="6"/><line x1="9" y1="1" x2="9" y2="4"/><line x1="15" y1="1" x2="15" y2="4"/><line x1="9" y1="20" x2="9" y2="23"/><line x1="15" y1="20" x2="15" y2="23"/><line x1="20" y1="9" x2="23" y2="9"/><line x1="20" y1="15" x2="23" y2="15"/><line x1="1" y1="9" x2="4" y2="9"/><line x1="1" y1="15" x2="4" y2="15"/></svg>
+              🛠️ Technology Stack
+            </h4>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px; font-size: 13px;">
+              <div style="padding: 8px; background: var(--bg-secondary); border: 1px solid var(--card-border); border-radius: 6px; grid-column: 1 / -1;">
+                <strong>Framework:</strong> Flutter SDK Version ^3.0.0 (Supports Android, iOS, and Web deployment)
+              </div>
+              <div style="padding: 8px; background: var(--bg-secondary); border: 1px solid var(--card-border); border-radius: 6px;">
+                <strong>Language:</strong> Dart (Modern object-oriented programming language)
+              </div>
+              <div style="padding: 8px; background: var(--bg-secondary); border: 1px solid var(--card-border); border-radius: 6px;">
+                <strong>Design System:</strong> Material Design 3 (Enabled by default for widgets, cards, dialogs, and actions)
+              </div>
+              <div style="padding: 8px; background: var(--bg-secondary); border: 1px solid var(--card-border); border-radius: 6px;">
+                <strong>State Management:</strong> StatefulWidget & setState() (Native reactive UI changes)
+              </div>
+              <div style="padding: 8px; background: var(--bg-secondary); border: 1px solid var(--card-border); border-radius: 6px;">
+                <strong>Date & Currency Formatting:</strong> intl Package (v0.19.0)
+              </div>
+              <div style="padding: 8px; background: var(--bg-secondary); border: 1px solid var(--card-border); border-radius: 6px;">
+                <strong>Icon Set:</strong> cupertino_icons (v1.0.0) iOS-style icons
+              </div>
+              <div style="padding: 8px; background: var(--bg-secondary); border: 1px solid var(--card-border); border-radius: 6px;">
+                <strong>Asset / Launcher Utility:</strong> flutter_launcher_icons (v0.14.4) generates launcher icons
+              </div>
+              <div style="padding: 8px; background: var(--bg-secondary); border: 1px solid var(--card-border); border-radius: 6px;">
+                <strong>Linting & Code Quality:</strong> flutter_lints (v3.0.0) enforces standards
+              </div>
+            </div>
+          </div>
+        </div>
+      `
+    }
+  },
+  {
+    id: 'ganesh-nanda-portfolio',
+    title: 'Ganesh Nanda Portfolio',
+    category: 'Webs',
+    desc: 'A premium personal developer portfolio featuring canvas particles, dynamic light/dark modes, radar skill chart, and multi-language translation support.',
+    techs: ['HTML5', 'CSS3', 'JavaScript', 'html2pdf.js', 'Canvas API'],
+    demoUrl: 'https://github.com/ganeshnanda120/Ganesh-Nanda',
+    githubUrl: 'https://github.com/ganeshnanda120/Ganesh-Nanda',
+    gradient: '#ffffff',
+    graphic: `<img src="./src/assets/ganesh_nanda_portfolio.jpg" alt="Ganesh Nanda Portfolio" style="width: 100%; height: 100%; object-fit: cover; display: block;" />`,
     caseStudy: {
       category: 'Web Application',
-      problem: 'Standard spreadsheet accounting systems are slow to input, require manual sorting, and load slowly on unstable cellular links.',
-      solution: 'Created a responsive React UI connecting to an Express web server with cache-optimized query aggregates.',
-      challenges: [
-        'Calculating large date-range analytics in MongoDB without causing server spikes.',
-        'Rendering SVG-based interactive charts efficiently on low-end mobile devices.'
-      ],
-      metrics: ['1.2s Load Speed', 'MongoDB Indices', 'Interactive SVG'],
-      architecture: ['React UI Client', 'Express backend', 'Mongoose Aggregate', 'MongoDB Cloud']
+      htmlContent: `
+        <div style="display: flex; flex-direction: column; gap: 20px;">
+          <div>
+            <h3 style="font-size: 18px; font-weight: 800; color: var(--accent); margin-bottom: 8px;">Case Study: Ganesh Nanda Portfolio</h3>
+            <p style="color: var(--text-secondary); font-size: 14.5px; line-height: 1.6;">
+              <strong>Ganesh Nanda Portfolio</strong> is a premium, interactive personal portfolio website showcasing software development expertise. It features a custom interactive particle background, multi-language toggling, a dynamic SVG radar skill chart, and an on-the-fly client-side PDF resume builder.
+            </p>
+          </div>
+          
+          <div>
+            <h4 style="font-size: 16px; font-weight: 750; color: var(--text-primary); margin-bottom: 12px; display: flex; align-items: center; gap: 6px;">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check-circle"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+              Key Features & Workflows:
+            </h4>
+            <ul style="padding-left: 20px; list-style-type: disc; display: flex; flex-direction: column; gap: 8px; color: var(--text-secondary); font-size: 14px; line-height: 1.5;">
+              <li><strong>Interactive Particles Canvas:</strong> Uses raw HTML5 Canvas API with custom gravity/attraction physics responding to mouse movements.</li>
+              <li><strong>Responsive Radar Chart:</strong> SVG-based skill radar map that plots skills dynamically onto circular grids using polar coordinates.</li>
+              <li><strong>In-Browser Resume Compiler:</strong> Generates styled, print-ready PDF resumes directly from HTML elements using client-side libraries.</li>
+              <li><strong>Multi-Language Support:</strong> Localized dictionary-based client translation system allowing instant toggling between English (EN) and Hindi (HI).</li>
+              <li><strong>Glassmorphic Theme Engine:</strong> Sleek slate-colored theme supporting smooth transition properties and dynamic CSS variable updates.</li>
+              <li><strong>Search and Filter System:</strong> Real-time keypress parsing to filter technical skills and category-based projects on-the-fly.</li>
+            </ul>
+          </div>
+
+          <hr style="border: none; border-top: 1px solid var(--card-border);" />
+
+          <div>
+            <h4 style="font-size: 16px; font-weight: 750; color: var(--text-primary); margin-bottom: 12px; display: flex; align-items: center; gap: 6px;">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-cpu"><rect x="4" y="4" width="16" height="16" rx="2" ry="2"/><rect x="9" y="9" width="6" height="6"/><line x1="9" y1="1" x2="9" y2="4"/><line x1="15" y1="1" x2="15" y2="4"/><line x1="9" y1="20" x2="9" y2="23"/><line x1="15" y1="20" x2="15" y2="23"/><line x1="20" y1="9" x2="23" y2="9"/><line x1="20" y1="15" x2="23" y2="15"/><line x1="1" y1="9" x2="4" y2="9"/><line x1="1" y1="15" x2="4" y2="15"/></svg>
+              Technology Stack Used
+            </h4>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px; font-size: 13px;">
+              <div style="padding: 8px; background: var(--bg-secondary); border: 1px solid var(--card-border); border-radius: 6px;">
+                <strong>Markup & Structure:</strong> HTML5 (Semantic elements)
+              </div>
+              <div style="padding: 8px; background: var(--bg-secondary); border: 1px solid var(--card-border); border-radius: 6px;">
+                <strong>Styling System:</strong> Vanilla CSS3 (Custom variables, glassmorphism)
+              </div>
+              <div style="padding: 8px; background: var(--bg-secondary); border: 1px solid var(--card-border); border-radius: 6px;">
+                <strong>Logic & Interactive Systems:</strong> ES6+ JavaScript (DOM manipulation)
+              </div>
+              <div style="padding: 8px; background: var(--bg-secondary); border: 1px solid var(--card-border); border-radius: 6px;">
+                <strong>PDF Generator:</strong> html2pdf.js (cdnjs release)
+              </div>
+              <div style="padding: 8px; background: var(--bg-secondary); border: 1px solid var(--card-border); border-radius: 6px; grid-column: 1 / -1;">
+                <strong>Layout Models:</strong> Grid Layout & Flexbox (100% responsive boundaries)
+              </div>
+            </div>
+          </div>
+        </div>
+      `
+    }
+  },
+  {
+    id: 'trading-bot',
+    title: 'Trading Bot',
+    category: 'Python',
+    desc: 'An automated algorithmic trading assistant featuring clean architecture, direct REST integration, server time sync, and simulated dry runs.',
+    techs: ['Python', 'requests', 'python-dotenv', 'pytest'],
+    demoUrl: 'https://github.com/ganeshnanda120/Trading-Bot',
+    githubUrl: 'https://github.com/ganeshnanda120/Trading-Bot',
+    gradient: '#000000',
+    graphic: `<img src="./src/assets/trading_bot.jpg" alt="Trading Bot" style="width: 100%; height: 100%; object-fit: cover; display: block;" />`,
+    caseStudy: {
+      category: 'Algorithmic Tool / Python',
+      htmlContent: `
+        <div style="display: flex; flex-direction: column; gap: 20px;">
+          <div>
+            <h3 style="font-size: 18px; font-weight: 800; color: var(--accent); margin-bottom: 8px;">Case Study: Trading Bot</h3>
+            <p style="color: var(--text-secondary); font-size: 14.5px; line-height: 1.6;">
+              An automated algorithmic trading assistant featuring clean architecture, direct REST integration, server time sync, and simulated dry runs.
+            </p>
+          </div>
+          
+          <div>
+            <h4 style="font-size: 16px; font-weight: 750; color: var(--text-primary); margin-bottom: 12px; display: flex; align-items: center; gap: 6px;">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check-circle"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+              Core Features:
+            </h4>
+            <ul style="padding-left: 20px; list-style-type: disc; display: flex; flex-direction: column; gap: 8px; color: var(--text-secondary); font-size: 14px; line-height: 1.5;">
+              <li><strong>Clean Architecture:</strong> Strict separation between input parsing, request validation, business logic, configuration, and API communication.</li>
+              <li><strong>Direct REST Integration:</strong> Handmade cryptographic signing (HMAC-SHA256) over standard requests to eliminate bloated external SDKs.</li>
+              <li><strong>Server Time Sync:</strong> Synchronizes dynamically with Binance's server time (<code>/fapi/v1/time</code>) to prevent -1021 INVALID_TIMESTAMP signature latency errors.</li>
+              <li><strong>Endpoint Routing:</strong> Automatically routes standard orders to <code>/order</code> and conditional orders (e.g., Stop-Limit orders) to the newer Binance Algo Order API (<code>/algoOrder</code>).</li>
+              <li><strong>Simulated Dry Run:</strong> Custom mock runner to test API flow, authorization failures, and margin limits without real credentials.</li>
+            </ul>
+          </div>
+
+          <hr style="border: none; border-top: 1px solid var(--card-border);" />
+
+          <div>
+            <h4 style="font-size: 16px; font-weight: 750; color: var(--text-primary); margin-bottom: 12px; display: flex; align-items: center; gap: 6px;">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-cpu"><rect x="4" y="4" width="16" height="16" rx="2" ry="2"/><rect x="9" y="9" width="6" height="6"/><line x1="9" y1="1" x2="9" y2="4"/><line x1="15" y1="1" x2="15" y2="4"/><line x1="9" y1="20" x2="9" y2="23"/><line x1="15" y1="20" x2="15" y2="23"/><line x1="20" y1="9" x2="23" y2="9"/><line x1="20" y1="15" x2="23" y2="15"/><line x1="1" y1="9" x2="4" y2="9"/><line x1="1" y1="15" x2="4" y2="15"/></svg>
+              🛠️ Technology Stack
+            </h4>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px; font-size: 13px;">
+              <div style="padding: 8px; background: var(--bg-secondary); border: 1px solid var(--card-border); border-radius: 6px;">
+                <strong>Language:</strong> Python 3.10+ (Tested on Python 3.14.0)
+              </div>
+              <div style="padding: 8px; background: var(--bg-secondary); border: 1px solid var(--card-border); border-radius: 6px; grid-column: 1 / -1;">
+                <strong>Dependencies:</strong><br/>
+                - <code>requests</code>: HTTP client for REST calls<br/>
+                - <code>python-dotenv</code>: Environment configuration management<br/>
+                - <code>pytest</code>: Automated testing framework for parameter validators
+              </div>
+              <div style="padding: 8px; background: var(--bg-secondary); border: 1px solid var(--card-border); border-radius: 6px; grid-column: 1 / -1;">
+                <strong>Key Files:</strong> <code>requirements.txt</code> | <code>README.md</code>
+              </div>
+            </div>
+          </div>
+        </div>
+      `
     }
   }
 ];
@@ -214,7 +878,7 @@ const locales = {
     
     certSub: "Licenses & Accomplishments",
     certTitle: "Certifications",
-    certClickPreview: "Click card to preview certification document",
+    certClickPreview: "Click 'View' to preview certificate",
     
     contactSub: "Contact Information",
     contactTitle: "Let's Connect",
@@ -279,7 +943,7 @@ const locales = {
     
     certSub: "लाइसेंस और उपलब्धियां",
     certTitle: "प्रमाणपत्र",
-    certClickPreview: "प्रमाणपत्र दस्तावेज देखने के लिए कार्ड पर क्लिक करें",
+    certClickPreview: "प्रमाणपत्र पूर्वावलोकन के लिए 'View' पर क्लिक करें",
     
     contactSub: "संपर्क जानकारी",
     contactTitle: "संपर्क करें",
@@ -341,6 +1005,7 @@ window.addEventListener('DOMContentLoaded', () => {
   renderProjects();
   renderCertifications();
   initScrollTracker();
+  initCertificateModal();
 });
 
 // Scroll Event handlers
@@ -551,12 +1216,23 @@ function initTypewriter() {
   if (!el) return;
 
   const titles = [
-    'Full Stack Developer',
-    'Flutter Developer'
+    'Full Stack Web Developer',
+    'App Developer'
   ];
 
   const tick = () => {
     const active = titles[typingIdx];
+    
+    // Dynamic a/an prefix update for English language
+    const prefixEl = document.querySelector('[data-i18n="heroTypingPrefix"]');
+    if (prefixEl && currentLang === 'en') {
+      if (active.toLowerCase().startsWith('a')) {
+        prefixEl.textContent = 'I am an';
+      } else {
+        prefixEl.textContent = 'I am a';
+      }
+    }
+
     if (!isDeleting) {
       typingSub = active.substring(0, typingSub.length + 1);
       el.textContent = typingSub;
@@ -745,15 +1421,11 @@ function renderProjects() {
             ${p.techs.map(t => `<span class="project-tech">${t}</span>`).join('')}
           </div>
           <div class="project-actions">
-            <button class="project-btn btn-secondary" onclick="openCaseStudy('${p.id}')">
+            <button class="project-btn btn-secondary" onclick="openCaseStudy('${p.id}')" style="flex: 1;">
               <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-book-open"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
               <span>Case Study</span>
             </button>
-            <a href="${p.demoUrl}" target="_blank" class="project-btn btn-primary">
-              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-external-link"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" x2="21" y1="14" y2="3"/></svg>
-              <span>Live Demo</span>
-            </a>
-            <a href="${p.githubUrl}" target="_blank" class="project-btn btn-secondary" style="padding: 8px;" title="Source Code">
+            <a href="${p.githubUrl}" target="_blank" class="project-btn btn-primary" style="padding: 8px; flex-shrink: 0; width: 36px; display: inline-flex; justify-content: center; align-items: center;" title="Source Code">
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-github"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
             </a>
           </div>
@@ -774,7 +1446,8 @@ function filterProjectsTab(tab) {
   
   if (tab === 'All') document.getElementById('filter-all').classList.add('active');
   if (tab === 'Apps') document.getElementById('filter-apps').classList.add('active');
-  if (tab === 'Web') document.getElementById('filter-web').classList.add('active');
+  if (tab === 'Webs') document.getElementById('filter-web').classList.add('active');
+  if (tab === 'Python') document.getElementById('filter-python').classList.add('active');
 
   renderProjects();
 }
@@ -788,7 +1461,7 @@ function renderCertifications() {
   if (!container) return;
 
   container.innerHTML = certificatesData.map(c => `
-    <div class="glass-card" style="cursor: pointer; border-left: 4px solid ${c.color}; text-align: left; display: flex; flex-direction: column; justify-content: space-between; min-height: 160px;" onclick="openCertificate('${c.id}')">
+    <div class="glass-card" style="border-left: 4px solid ${c.color}; text-align: left; display: flex; flex-direction: column; justify-content: space-between; min-height: 160px;">
       <div>
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="${c.color}" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-award" style="margin-bottom: 12px;"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg>
         <h3 style="font-size: 16px; font-weight: 750; margin-bottom: 6px;">${c.title}</h3>
@@ -796,10 +1469,10 @@ function renderCertifications() {
       </div>
       <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 12px; font-size: 12px;">
         <span style="color: var(--text-muted); font-weight: 600;">${c.date}</span>
-        <span style="color: ${c.color}; font-weight: 700; display: flex; align-items: center; gap: 4px;">
-          Verify
-          <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-external-link"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" x2="21" y1="14" y2="3"/></svg>
-        </span>
+        <button onclick="openCertificate('${c.id}')" style="background: none; border: none; color: ${c.color}; font-weight: 700; cursor: pointer; display: inline-flex; align-items: center; gap: 4px; font-size: 12px; padding: 4px 8px; border-radius: 4px; transition: all 0.2s;" onmouseover="this.style.opacity='0.7'" onmouseout="this.style.opacity='1'">
+          View
+          <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-eye"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg>
+        </button>
       </div>
     </div>
   `).join('');
@@ -809,8 +1482,39 @@ function renderCertifications() {
 // 9. MODALS SYSTEM
 // ==========================================
 
+function scaleResume() {
+  const sheet = document.getElementById('resume-sheet');
+  const container = document.getElementById('resume-scroll-container');
+  if (!sheet || !container) return;
+
+  sheet.style.transform = 'none';
+  
+  const pad = 32;
+  const containerWidth = container.clientWidth - pad;
+  const containerHeight = container.clientHeight - pad;
+
+  const baseWidth = 800;
+  const baseHeight = 1130;
+
+  const scaleX = containerWidth / baseWidth;
+  const scaleY = containerHeight / baseHeight;
+  const scale = Math.min(scaleX, scaleY, 1);
+
+  sheet.style.transform = `scale(${scale})`;
+  sheet.style.transformOrigin = 'center center';
+}
+
+// Add event listener for resizing to ensure scaling is maintained
+window.addEventListener('resize', () => {
+  const modal = document.getElementById('resume-modal');
+  if (modal && modal.style.display === 'flex') {
+    scaleResume();
+  }
+});
+
 function openResume() {
   document.getElementById('resume-modal').style.display = 'flex';
+  setTimeout(scaleResume, 50);
 }
 
 function closeResume() {
@@ -819,6 +1523,7 @@ function closeResume() {
 
 function downloadResume() {
   const element = document.getElementById('resume-sheet');
+  element.classList.add('print-force-light');
   const opt = {
     margin:       [5, 5, 5, 5],
     filename:     'Ganesh_Nanda_Resume.pdf',
@@ -826,7 +1531,12 @@ function downloadResume() {
     html2canvas:  { scale: 2, useCORS: true },
     jsPDF:        { unit: 'mm', format: 'a4', orientation: 'portrait' }
   };
-  html2pdf().set(opt).from(element).save();
+  html2pdf().set(opt).from(element).save().then(() => {
+    element.classList.remove('print-force-light');
+  }).catch((err) => {
+    console.error('PDF generation error', err);
+    element.classList.remove('print-force-light');
+  });
 }
 
 function openCaseStudy(id) {
@@ -836,21 +1546,66 @@ function openCaseStudy(id) {
 
   document.getElementById('cs-title').textContent = `${p.title} Case Study`;
   document.getElementById('cs-category').textContent = cs.category;
-  document.getElementById('cs-problem').textContent = cs.problem;
-  document.getElementById('cs-problem-solution').textContent = cs.solution;
 
-  document.getElementById('cs-challenges-list').innerHTML = cs.challenges.map(c => `
-    <li style="margin-bottom: 6px; color: var(--text-secondary);">${c}</li>
-  `).join('');
+  const contentBody = document.getElementById('cs-content-body');
+  if (cs.htmlContent) {
+    contentBody.innerHTML = cs.htmlContent;
+  } else {
+    // Fallback: render the original structured format
+    contentBody.innerHTML = `
+      <div style="display: flex; gap: 16px; align-items: flex-start;">
+        <div style="width: 40px; height: 40px; border-radius: 8px; background-color: var(--accent-glow); display: flex; align-items: center; justify-content: center; color: var(--accent); flex-shrink: 0;">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-target"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>
+        </div>
+        <div>
+          <h4 style="font-size: 16px; font-weight: 750; margin-bottom: 6px; color: var(--text-primary);" data-i18n="csProblem">Problem Statement</h4>
+          <p id="cs-problem" style="color: var(--text-secondary); font-size: 14px; line-height: 1.6;">${cs.problem}</p>
+        </div>
+      </div>
 
-  document.getElementById('cs-architecture-flow').innerHTML = cs.architecture.map((a, i) => `
-    <div style="padding: 6px 12px; background: var(--card-bg); border: 1px solid var(--accent); border-radius: 4px; font-weight: bold;">${a}</div>
-    ${i < cs.architecture.length - 1 ? '<span style="color: var(--accent);">➡</span>' : ''}
-  `).join('');
+      <div style="display: flex; gap: 16px; align-items: flex-start;">
+        <div style="width: 40px; height: 40px; border-radius: 8px; background-color: var(--accent-glow); display: flex; align-items: center; justify-content: center; color: var(--accent-secondary); flex-shrink: 0;">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check-circle"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+        </div>
+        <div>
+          <h4 style="font-size: 16px; font-weight: 750; margin-bottom: 6px; color: var(--text-primary);" data-i18n="csSolution">The Solution</h4>
+          <p id="cs-problem-solution" style="color: var(--text-secondary); font-size: 14px; line-height: 1.6;">${cs.solution}</p>
+        </div>
+      </div>
 
-  document.getElementById('cs-metrics-container').innerHTML = cs.metrics.map(m => `
-    <div style="padding: 8px 12px; border-radius: 6px; background-color: var(--accent-glow); color: var(--accent); font-weight: 700; font-size: 13px;">${m}</div>
-  `).join('');
+      <div style="display: flex; gap: 16px; align-items: flex-start;">
+        <div style="width: 40px; height: 40px; border-radius: 8px; background-color: var(--accent-glow); display: flex; align-items: center; justify-content: center; color: var(--accent); flex-shrink: 0;">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-cpu"><rect width="16" height="16" x="4" y="4" rx="2"/><rect width="6" height="6" x="9" y="9" rx="1"/><path d="M9 1v3"/><path d="M15 1v3"/><path d="M9 20v3"/><path d="M15 20v3"/><path d="M20 9h3"/><path d="M20 15h3"/><path d="M1 9h3"/><path d="M1 15h3"/></svg>
+        </div>
+        <div style="width: 100%;">
+          <h4 style="font-size: 16px; font-weight: 750; margin-bottom: 8px; color: var(--text-primary);" data-i18n="csChallenges">Technical Bottlenecks & Decisions</h4>
+          <ul id="cs-challenges-list" style="padding-left: 16px; margin: 0 0 16px; font-size: 14px; line-height: 1.6;">
+            ${cs.challenges.map(c => `<li style="margin-bottom: 6px; color: var(--text-secondary);">${c}</li>`).join('')}
+          </ul>
+
+          <h5 style="font-size: 13px; font-weight: 750; margin-bottom: 8px; text-transform: uppercase; color: var(--text-muted);" data-i18n="csArchitecture">Architecture Diagram</h5>
+          <div id="cs-architecture-flow" style="background-color: var(--bg-secondary); border: 1px solid var(--card-border); border-radius: 6px; padding: 16px; font-family: monospace; font-size: 12px; color: var(--text-primary); display: flex; justify-content: center; gap: 8px; flex-wrap: wrap; align-items: center;">
+            ${cs.architecture.map((a, i) => `
+              <div style="padding: 6px 12px; background: var(--card-bg); border: 1px solid var(--accent); border-radius: 4px; font-weight: bold;">${a}</div>
+              ${i < cs.architecture.length - 1 ? '<span style="color: var(--accent);">➡</span>' : ''}
+            `).join('')}
+          </div>
+        </div>
+      </div>
+
+      <div style="display: flex; gap: 16px; align-items: flex-start;">
+        <div style="width: 40px; height: 40px; border-radius: 8px; background-color: var(--accent-glow); display: flex; align-items: center; justify-content: center; color: var(--success); flex-shrink: 0;">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-award"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg>
+        </div>
+        <div>
+          <h4 style="font-size: 16px; font-weight: 750; margin-bottom: 6px; color: var(--text-primary);" data-i18n="csImpact">Impact & Key Results</h4>
+          <div id="cs-metrics-container" style="display: flex; gap: 12px; flex-wrap: wrap; marginTop: 8px;">
+            ${cs.metrics.map(m => `<div style="padding: 8px 12px; border-radius: 6px; background-color: var(--accent-glow); color: var(--accent); font-weight: 700; font-size: 13px;">${m}</div>`).join('')}
+          </div>
+        </div>
+      </div>
+    `;
+  }
 
   document.getElementById('case-study-modal').style.display = 'flex';
 }
@@ -864,9 +1619,14 @@ function openCertificate(id) {
   if (!cert) return;
 
   // Set the image src
-  document.getElementById('cert-preview-img').src = cert.image;
+  const imgEl = document.getElementById('cert-preview-img');
+  if (imgEl) imgEl.src = cert.image;
 
-  // Toggle display and set link for external verification
+  // Set modal title
+  const titleEl = document.getElementById('cert-modal-title');
+  if (titleEl) titleEl.textContent = cert.title;
+
+  // Set verify link
   const verifyLink = document.getElementById('cert-verify-link');
   if (verifyLink) {
     if (cert.verifyUrl) {
@@ -877,11 +1637,30 @@ function openCertificate(id) {
     }
   }
 
+  // Store current cert for download
+  window._currentCert = cert;
+
   document.getElementById('certificate-modal').style.display = 'flex';
 }
 
 function closeCertificate() {
   document.getElementById('certificate-modal').style.display = 'none';
+}
+
+function downloadCertificate() {
+  const cert = window._currentCert;
+  if (!cert || !cert.image) return;
+
+  const link = document.createElement('a');
+  link.href = cert.image;
+  link.download = cert.title.replace(/[^a-zA-Z0-9 ]/g, '').replace(/\s+/g, '_') + '.jpg';
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+}
+
+function initCertificateModal() {
+  // Modal event listeners are now handled via inline onclick in HTML
 }
 
 // ==========================================
@@ -896,3 +1675,21 @@ function initVisitorCounter() {
   localStorage.setItem('portfolio_visitors', currentCount.toString());
   visitorCountEl.textContent = currentCount;
 }
+
+// Export functions to window to guarantee global access
+window.scrollToSection = scrollToSection;
+window.toggleMobileMenu = toggleMobileMenu;
+window.toggleTheme = toggleTheme;
+window.toggleLanguage = toggleLanguage;
+window.filterSkills = filterSkills;
+window.filterProjectsTab = filterProjectsTab;
+window.filterProjectsSearch = filterProjectsSearch;
+window.openResume = openResume;
+window.scaleResume = scaleResume;
+window.closeResume = closeResume;
+window.downloadResume = downloadResume;
+window.openCaseStudy = openCaseStudy;
+window.closeCaseStudy = closeCaseStudy;
+window.openCertificate = openCertificate;
+window.closeCertificate = closeCertificate;
+window.downloadCertificate = downloadCertificate;
