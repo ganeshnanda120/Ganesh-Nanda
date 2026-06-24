@@ -1506,35 +1506,7 @@ button, input, textarea, select {
   }
 }
 
-/* Theme Adaptive Styles for Resume Preview Sheet on screen */
-#resume-sheet {
-  background-color: var(--bg-primary) !important;
-  color: var(--text-secondary) !important;
-  border-color: var(--card-border) !important;
-  transition: background-color var(--transition-normal), color var(--transition-normal);
-}
-
-#resume-sheet h1,
-#resume-sheet h2,
-#resume-sheet h3,
-#resume-sheet h4,
-#resume-sheet strong {
-  color: var(--text-primary) !important;
-}
-
-#resume-sheet h2 {
-  border-bottom-color: var(--text-primary) !important;
-}
-
-#resume-sheet p,
-#resume-sheet li,
-#resume-sheet span:not([style*="color"]) {
-  color: var(--text-secondary) !important;
-}
-
-#resume-sheet hr {
-  border-top-color: var(--card-border) !important;
-}
+/* Theme Adaptive Styles for Resume Preview Sheet on screen - disabled to always display in light theme */
 
 /* Force light mode styles for PDF Download / Print */
 #resume-sheet.print-force-light {
