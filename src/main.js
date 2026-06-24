@@ -887,7 +887,7 @@ const locales = {
     resumeModalTitle: "Resume Preview",
     resumePrint: "Print",
     resumeDownload: "Download PDF",
-    resumeDesignation: "Full Stack & Apps Developer",
+    resumeDesignation: "Software Developer",
     resumeSummaryTitle: "Professional Summary",
     resumeSummary: "Highly motivated and results-oriented software developer with a strong foundation in building high-performance mobile applications, responsive web applications, and backend REST APIs. Expert in writing clean, modular code, solving complex technical issues, and launching scalable digital products.",
     resumeExpTitle: "Professional Experience",
@@ -952,7 +952,7 @@ const locales = {
     resumeModalTitle: "बायोडाटा पूर्वावलोकन",
     resumePrint: "प्रिंट करें",
     resumeDownload: "डाउनलोड PDF",
-    resumeDesignation: "फुल स्टैक और ऐप्स डेवलपर",
+    resumeDesignation: "सॉफ्टवेयर डेवलपर",
     resumeSummaryTitle: "व्यावसायिक सारांश",
     resumeSummary: "अत्यधिक प्रेरित और परिणाम-उन्मुख सॉफ्टवेयर डेवलपर, जिसे मोबाइल ऐप डेवलपमेंट, उत्तरदायी वेब सिस्टम और बैकएंड REST एपीआई एकीकरण में मजबूत अनुभव है। कुशल, स्वच्छ कोड लिखने, तकनीकी समस्याओं को हल करने और स्केलेबल डिजिटल उत्पाद बनाने में कुशल।",
     resumeExpTitle: "व्यावसायिक अनुभव",
@@ -1216,8 +1216,7 @@ function initTypewriter() {
   if (!el) return;
 
   const titles = [
-    'Full Stack Web Developer',
-    'App Developer'
+    'Software Developer'
   ];
 
   const tick = () => {

@@ -1563,3 +1563,46 @@ button, input, textarea, select {
 #resume-sheet.print-force-light hr {
   border-top-color: #000000 !important;
 }
+
+/* Direct Contact Channel Buttons Centering */
+.contact-channels-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+}
+
+.contact-channel-btn {
+  justify-content: center !important;
+  padding: 16px 20px !important;
+  gap: 12px !important;
+  border-radius: 12px !important;
+  display: flex !important;
+  align-items: center !important;
+}
+
+.contact-btn-text {
+  text-align: center !important;
+}
+
+.contact-heading {
+  display: block;
+  font-size: 13px;
+}
+
+.contact-value {
+  font-size: 11px;
+  color: var(--text-muted);
+}
+
+/* Skills Mobile Grid & Padding Fixes */
+@media (max-width: 550px) {
+  .skills-grid {
+    grid-template-columns: 1fr !important;
+    gap: 16px !important;
+  }
+  
+  .skills-grid .glass-card {
+    padding: 16px !important;
+  }
+}
+
