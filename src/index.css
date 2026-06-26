@@ -1578,3 +1578,8 @@ button, input, textarea, select {
   }
 }
 
+/* Brand Logo Hover Micro-animation */
+.nav-brand:hover .brand-logo {
+  transform: scale(1.1) rotate(8deg);
+}
+

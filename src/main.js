@@ -848,15 +848,15 @@ const locales = {
     
     heroGreeting: "Hi, I'm",
     heroTypingPrefix: "I am a ",
-    heroDesc: "I am a passionate Software Developer specializing in building full-stack web applications and cross-platform mobile apps. I love creating responsive user interfaces and practical solutions using React, Node.js, and Flutter.",
+    heroDesc: "I am a passionate Software Developer and Vibe Coder specializing in building full-stack web applications and cross-platform mobile apps. I love creating responsive user interfaces, AI-powered experiences, and practical solutions using React, Node.js, Flutter, Firebase, and Python. I'm passionate about turning innovative ideas into modern, scalable, and user-friendly applications.",
     heroBtnResume: "View Resume",
     heroBtnContact: "Get in Touch",
     
     aboutSub: "Get to know me",
     aboutTitle: "About Me",
-    aboutBio: "I am a passionate developer specializing in mobile Apps and Web Development. I enjoy building practical solutions that solve real-world problems. With experience across responsive frontend interfaces (React, Flutter) and backend integration (Node.js, MongoDB), I focus on performance, cleanliness, and developer experience.",
+    aboutBio: "I am a passionate Software Developer and Vibe Coder specializing in mobile app and web development. I enjoy building practical solutions that solve real-world problems. With experience across responsive frontend development (React, Flutter) and backend integration (Node.js, MongoDB, Firebase), I focus on performance, clean architecture, developer experience, and creating modern, user-friendly applications.",
     aboutGoalsTitle: "Career Goals",
-    aboutGoals: "My goal is to construct robust software products that simplify human tasks. I am eager to join dynamic engineering teams where I can contribute my skills in Flutter, full-stack JavaScript frameworks, and efficient database management to build impactful applications.",
+    aboutGoals: "My career goal is to build innovative, scalable, and user-centric software that solves real-world problems. I aspire to contribute to forward-thinking engineering teams where I can leverage my expertise in Flutter, full-stack web development, Firebase, Python, and modern technologies while continuously learning, embracing vibe coding, and creating impactful digital experiences.",
     aboutLoc: "Location",
     aboutMail: "Email",
     aboutDegree: "Education",
@@ -970,7 +970,7 @@ const locales = {
 // 2. STATE MANAGER
 // ==========================================
 
-let currentTheme = localStorage.getItem('portfolio_theme') || 'dark';
+let currentTheme = document.documentElement.getAttribute('data-theme') || 'dark';
 let currentLang = localStorage.getItem('portfolio_lang') || 'en';
 let activeFilter = 'All';
 let typingIdx = 0;
@@ -1216,7 +1216,8 @@ function initTypewriter() {
   if (!el) return;
 
   const titles = [
-    'Software Developer'
+    'Software Developer',
+    'Vibe Coder'
   ];
 
   const tick = () => {
