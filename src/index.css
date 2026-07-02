@@ -1259,6 +1259,33 @@ button, input, textarea, select {
   to { transform: rotate(360deg); }
 }
 
+/* Tablet Navigation Fit (prevents Contact button overflow) */
+@media (min-width: 769px) and (max-width: 1090px) {
+  .navbar {
+    padding: 0 20px;
+  }
+  .nav-links {
+    gap: 6px;
+  }
+  .nav-link {
+    padding: 8px 12px;
+    font-size: 14.5px;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 992px) {
+  .navbar .nav-brand span {
+    display: none !important;
+  }
+  .nav-links {
+    gap: 4px;
+  }
+  .nav-link {
+    padding: 6px 10px;
+    font-size: 13.5px;
+  }
+}
+
 /* Responsive Breakpoints */
 @media (max-width: 992px) {
   .hero-sec {
